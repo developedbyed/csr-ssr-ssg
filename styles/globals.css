@@ -14,3 +14,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+main {
+  margin: 0% 20%;
+}
+
+nav {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(66, 74, 133);
+}
