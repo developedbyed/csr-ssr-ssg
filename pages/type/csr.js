@@ -3,6 +3,7 @@ import styles from "../../styles/Home.module.css";
 import Link from "next/link";
 
 export default function CSR() {
+  const [text, setText] = useState("Popular movies");
   //Create a state
   const [movies, setMovies] = useState([]);
   //Fetch The movie
@@ -21,7 +22,7 @@ export default function CSR() {
   return (
     <div className={styles.container}>
       <main styles={styles.main}>
-        <h1>Popular movies</h1>
+        <h1 onClick={() => setText("woooo")}>{text}</h1>
         <h2>Enjoy our top 20 list of popular movies coming out in 2022</h2>
         <div className={styles.cards}>
           {movies.map((movie) => (

@@ -1,5 +1,6 @@
 import styles from "../../styles/Home.module.css";
 import Link from "next/link";
+import { useState } from "react";
 
 // This gets called on every request
 export async function getStaticProps() {
@@ -14,10 +15,11 @@ export async function getStaticProps() {
 }
 
 export default function SSR({ movies }) {
+  const [text, setText] = useState("Popular movies");
   return (
     <div className={styles.container}>
       <main styles={styles.main}>
-        <h1>Popular movies</h1>
+        <h1 onClick={() => setText("woooo")}>{text}</h1>
         <h2>Enjoy our top 20 list of popular movies coming out in 2022</h2>
         <div className={styles.cards}>
           {movies.results.map((movie) => (
